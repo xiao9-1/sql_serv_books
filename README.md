@@ -53,7 +53,7 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrong!Passw0rd' -p 1433:1433 
 ```
 
 - `ACCEPT_EULA=Y` — соглашение с лицензионным соглашением MS SQL Server.
-- `SA_PASSWORD=YourStrong!Passw0rd` — пароль для учётной записи администратора `SA`.
+- `SA_PASSWORD=YourStrong!Passw0rd` — пароль для учётной записи администратора `sa`.
 - `-p 1433:1433` — проброс порта для доступа к серверу.
 
 ### 4. Выгрузка файла books_authors.txt
