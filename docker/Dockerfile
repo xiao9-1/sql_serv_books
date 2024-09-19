@@ -23,11 +23,11 @@ RUN mkdir -p /var/lib/apt/lists/partial && \
     pip3 install pyodbc
 
 # Копируем SQL-скрипты в контейнер
-COPY ../sql/01_create-booksDB.sql /tmp/01_create-booksDB.sql
-COPY ../sql/02_insert_to_booksDB.sql /tmp/02_insert_to_booksDB.sql
+COPY sql/01_create-booksDB.sql /tmp/01_create-booksDB.sql
+COPY sql/02_insert_to_booksDB.sql /tmp/02_insert_to_booksDB.sql
 
 # Копируем Python-скрипт в контейнер
-COPY ../src/connectDB.py /tmp/connectDB.py
+COPY src/connectDB.py /tmp/connectDB.py
 
 # Запускаем процесс SQL Server, затем выполняем SQL-скрипты и Python-скрипт
 CMD /bin/bash -c "/opt/mssql/bin/sqlservr & sleep 30; \
